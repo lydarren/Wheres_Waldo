@@ -84,7 +84,7 @@ def create_model(shape):
 def maxpool_dropout_vgg(shape):  
     model = Sequential()
     model.add(Conv2D(64, kernel_size=(3, 3),padding='same',
-                     activation="relu", input_shape=input_shape))
+                     activation="relu", input_shape=shape))
     model.add(Conv2D(64, (3, 3), padding='same',activation='relu'))
     model.add(Dropout(0.5))
     model.add(MaxPooling2D(pool_size = (2, 2)))
